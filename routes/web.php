@@ -6,6 +6,8 @@ use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\JesusController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\OficinaController;
+use App\Http\Controllers\PedidosController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -35,3 +37,6 @@ Route::get('/yo', [JesusController::class, 'listar']);
 Route::get('/Clientes', [CustomerController::class, 'listar']);
 
 Route::get('/oficinas', [OficinaController::class, 'listar']);
+
+Route::get('/pedidos', [PedidosController::class, 'listar']);
+
