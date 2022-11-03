@@ -1,13 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UsuariosController;
-use App\Http\Controllers\ProductoController;
-use App\Http\Controllers\JesusController;
-use App\Http\Controllers\CustomerController;
-use App\Http\Controllers\OficinaController;
-use App\Http\Controllers\PedidosController;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -24,19 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/usuarios', function() {
-    return "Aqui van los usuarios";
-});
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/usuarios2', [UsuariosController::class, 'listar']);
-
-Route::get('/productos', [ProductoController::class, 'listar']);
-
-Route::get('/yo', [JesusController::class, 'listar']);
-
-Route::get('/Clientes', [CustomerController::class, 'listar']);
-
-Route::get('/oficinas', [OficinaController::class, 'listar']);
-
-Route::get('/pedidos', [PedidosController::class, 'listar']);
-
+require __DIR__.'/auth.php';
