@@ -16,92 +16,21 @@
                         <th>Nombre</th>
                         <th>Appellido</th>
                         <th>Telefono</th>
-                        <th>Email</th>
+                        <th>Dirrecion</th>
                         <th>Acciones</th>
                     </tr>
+                    @foreach ($listado as $cliente)
                     <tr>
-                        <th>Yilian</th>
-                        <th>No le pregunte</th>
-                        <th>991644788</th>
-                        <th>yilian@gmail.com</th>
+                        <th>{{ $cliente->contactFirstName }}</th>
+                        <th>{{ $cliente->contactLastName }}</th>
+                        <th>{{ $cliente->phone }}</th>
+                        <th>{{ $cliente->addressLine1 }}</th>
                         <td>
                             <a href="#" class="btn btn-success">Editar</a>
                             <a href="#" class="btn btn-danger">Eliminar</a>
                         </td>
                     </tr>
-                    <tr>
-                        <th>Valeria</th>
-                        <th>Palacios</th>
-                        <th>99577844</th>
-                        <th>Valeria@gmail.com</th>
-                        <td>
-                            <a href="#" class="btn btn-success">Editar</a>
-                            <a href="#" class="btn btn-danger">Eliminar</a>
-                        </td>
-                    <tr>
-                        <th>Brigithe</th>
-                        <th>Jaramillo</th>
-                        <th>992455460</th>
-                        <th>brigithe@gmail.com</th>
-                        <td>
-                            <a href="#" class="btn btn-success">Editar</a>
-                            <a href="#" class="btn btn-danger">Eliminar</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Nicole</th>
-                        <th>Cueva</th>
-                        <th>932445778</th>
-                        <th>nicole@gmail.com</th>
-                        <td>
-                            <a href="#" class="btn btn-success">Editar</a>
-                            <a href="#" class="btn btn-danger">Eliminar</a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <th>Naomi</th>
-                        <th>Lorenze</th>
-                        <th>932445778</th>
-                        <th>naomi@gmail.com</th>
-                        <td>
-                            <a href="#" class="btn btn-success">Editar</a>
-                            <a href="#" class="btn btn-danger">Eliminar</a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <th>Gabriela</th>
-                        <th>Razuri</th>
-                        <th>932445778</th>
-                        <th>gabriela@gmail.com</th>
-                        <td>
-                            <a href="#" class="btn btn-success">Editar</a>
-                            <a href="#" class="btn btn-danger">Eliminar</a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <th>Dayanna</th>
-                        <th>Chavez</th>
-                        <th>932445778</th>
-                        <th>dayanna@gmail.com</th>
-                        <td>
-                            <a href="#" class="btn btn-success">Editar</a>
-                            <a href="#" class="btn btn-danger">Eliminar</a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <th>Andrea</th>
-                        <th>Cortez</th>
-                        <th>932445778</th>
-                        <th>andrea@gmail.com</th>
-                        <td>
-                            <a href="#" class="btn btn-success">Editar</a>
-                            <a href="#" class="btn btn-danger">Eliminar</a>
-                        </td>
-                    </tr>
+                    @endforeach
                 </table>
 
 

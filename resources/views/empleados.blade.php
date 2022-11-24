@@ -17,88 +17,19 @@
                         <th>Email</th>
                         <th>Acciones</th>
                     </tr>
+                    @foreach ($empleados as $empleado)
                     <tr>
-                        <th>Yilian</th>
-                        <th>No le pregunte</th>
-                        <th>991644788</th>
-                        <th>yilian@gmail.com</th>
+                        <th>{{ $empleado->lastName }}</th>
+                        <th>{{ $empleado->firstName }}</th>
+                        <th>{{ $empleado->employeeNumber }}</th>
+                        <th>{{ $empleado->email }}</th>
                         <td>
                             <a href="#" class="btn btn-success">Editar</a>
                             <a href="#" class="btn btn-danger">Eliminar</a>
                         </td>
                     </tr>
-                    <tr>
-                        <th>Brigithe</th>
-                        <th>Jaramillo</th>
-                        <th>992455460</th>
-                        <th>brigithe@gmail.com</th>
-                        <td>
-                            <a href="#" class="btn btn-success">Editar</a>
-                            <a href="#" class="btn btn-danger">Eliminar</a>
-                        </td>
-                    </tr>
-                    <th>Valeria</th>
-                        <th>Palacios</th>
-                        <th>99577844</th>
-                        <th>Valeria@gmail.com</th>
-                        <td>
-                            <a href="#" class="btn btn-success">Editar</a>
-                            <a href="#" class="btn btn-danger">Eliminar</a>
-                        </td>
-                    <tr>
-                        <th>Nicole</th>
-                        <th>Cueva</th>
-                        <th>932445778</th>
-                        <th>nicole@gmail.com</th>
-                        <td>
-                            <a href="#" class="btn btn-success">Editar</a>
-                            <a href="#" class="btn btn-danger">Eliminar</a>
-                        </td>
-                    </tr>
+                    @endforeach
 
-                    <tr>
-                        <th>Naomi</th>
-                        <th>Lorenze</th>
-                        <th>932445778</th>
-                        <th>naomi@gmail.com</th>
-                        <td>
-                            <a href="#" class="btn btn-success">Editar</a>
-                            <a href="#" class="btn btn-danger">Eliminar</a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <th>Gabriela</th>
-                        <th>Razuri</th>
-                        <th>932445778</th>
-                        <th>gabriela@gmail.com</th>
-                        <td>
-                            <a href="#" class="btn btn-success">Editar</a>
-                            <a href="#" class="btn btn-danger">Eliminar</a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <th>Dayanna</th>
-                        <th>Chavez</th>
-                        <th>932445778</th>
-                        <th>dayanna@gmail.com</th>
-                        <td>
-                            <a href="#" class="btn btn-success">Editar</a>
-                            <a href="#" class="btn btn-danger">Eliminar</a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <th>Andrea</th>
-                        <th>Cortez</th>
-                        <th>932445778</th>
-                        <th>andrea@gmail.com</th>
-                        <td>
-                            <a href="#" class="btn btn-success">Editar</a>
-                            <a href="#" class="btn btn-danger">Eliminar</a>
-                        </td>
-                    </tr>
                 </table>
                 </div>
             </div>
