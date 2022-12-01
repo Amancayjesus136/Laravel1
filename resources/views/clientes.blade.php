@@ -14,7 +14,7 @@
                 <table class="table">
                     <tr>
                         <th>Nombre</th>
-                        <th>Appellido</th>
+                        <th>Apellido</th>
                         <th>Telefono</th>
                         <th>Dirrecion</th>
                         <th>Acciones</th>
