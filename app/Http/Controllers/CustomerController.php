@@ -22,13 +22,36 @@ class CustomerController extends Controller
         return view('clientes-registrar');
     }
 
+    function actualizar($id) {
+        $cliente = DB::table('customers')
+                        ->where('customerNumber', $id)
+                        ->first();
+        return view('clientes-actualizar', compact('cliente'));
+    }
+
     function guardar() {
+        print_r($_POST);
         DB::table('customers')->insert([
-            'customerName' => 'Cualquiercosa',
-            'contactFirstName' => $_POST['contacFirstName'],
+            'customerName' => $_POST['contactFirstName'],
+            'contactFirstName' => $_POST['contactFirstName'],
             'contactLastName' => $_POST['contactLastName'],
-            'phone' => $__POST['phone'],
-            'addressLine1' => $_POST['addresLine1'],
+            'phone' => $_POST['phone'],
+            'addressLine1' => $_POST['addressLine1'],
+            'city' => 'Lima',
+            'country' => 'Peru'
+        ]);
+        return redirect()->route('clientes');
+    }
+
+    function editar($id) {
+        DB::table('customers')
+        ->where('customerNumber', $id)
+        ->update([
+            'customerName' => $_POST['contactFirstName'],
+            'contactFirstName' => $_POST['contactFirstName'],
+            'contactLastName' => $_POST['contactLastName'],
+            'phone' => $_POST['phone'],
+            'addressLine1' => $_POST['addressLine1'],
             'city' => 'Lima',
             'country' => 'Peru'
         ]);
